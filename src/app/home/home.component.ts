@@ -42,55 +42,12 @@ export class HomeComponent {
   errorMessage = '';
 
   selectedFilter: string = '*';
-  skills = [
-    { icon: 'bi bi-shield-check', label: 'SEO' },
-    { icon: 'bi bi-phone', label: 'Responsive Design' },
-    { icon: 'bi bi-lightning-charge', label: 'PWA' },
-    { icon: 'bi bi-cloud-upload', label: 'Deployment' },
-    { icon: 'bi bi-bug', label: 'Debugging' },
-    { icon: 'bi bi-diagram-3', label: 'Architecture' },
-    { icon: 'bi bi-graph-up', label: 'Analytics' },
-    { icon: 'bi bi-share', label: 'Agile/Scrum' },
-  ];
 
-  projects = [
-    {
-      title: 'Mairie de Toffo',
-      category: ['web', 'official'],
-      img: '../../assets/img/portfolio/mairie.png',
-      link: 'https://mairietoffo.bj',
-    },
-    {
-      title: 'UDA Organization',
-      category: ['web'],
-      img: 'assets/img/portfolio/uda.png',
-      link: 'https://app.udaorganisation.org',
-    },
-    {
-      title: 'Kondocv',
-      category: ['web',],
-      img: 'assets/img/portfolio/kondocv.png',
-      link: 'https://kondocv.com',
-    },
-    {
-      title: 'SIDoFFE-NG',
-      category: ['web', 'official'],
-      img: 'assets/img/portfolio/sidoffe.png',
-      link: 'https://sidoffe-ng.social.gouv.bj/sidoffepublic/public',
-    }
-  ];
+ 
   constructor(private http: HttpClient) { }
 
 
-    ngAfterViewInit(): void {
-    const typed = new Typed('.typed', {
-      strings: ['Designer', 'Developer', 'Freelancer', 'Artist'], // ← texte
-      typeSpeed: 80,
-      backSpeed: 40,
-      backDelay: 1500,
-      loop: true
-    });
-  }
+
   scrollToTop() {
     window.scrollTo({
       top: 0,
@@ -150,5 +107,14 @@ toggleMenu() {
   this.isMenuOpen = !this.isMenuOpen;
 }
 
+
+
+  activeTab: string = 'presentation';
+
+  showTab(tab: string) {
+    console.log("tab",tab);
+    
+    this.activeTab = tab;
+  }
 
 }

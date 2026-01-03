@@ -1,0 +1,1050 @@
+<header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+        <!-- Logo à gauche -->
+        <a href="index.html" class="logo d-flex align-items-center">
+            <!-- <img src="assets/img/logo.webp" alt=""> -->
+            <h1 class="sitename mb-0">Alassane ADOM</h1>
+        </a>
+
+        <!-- Menu et liens sociaux regroupés à droite -->
+        <div class="d-flex align-items-center">
+
+            <!-- Menu -->
+            <nav id="navmenu" class="navmenu me-3">
+                <ul class="d-flex mb-0 list-unstyled">
+                    <li><a href="#hero" class="active">Accueil</a></li>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#resume">CV</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#services">DISTINCTIONS </a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+        </div>
+
+    </div>
+</header>
+
+
+<main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <div id="font" class="row align-items-center content">
+                <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+                    <h2>Waïdou ADOM ALASSANE </h2>
+                    <p class="lead">Commissaire de Police engagé, dédié à la sécurité et à la protection des citoyens,
+                        avec une expérience solide dans le maintien de l’ordre et la gestion des équipes.</p>
+
+                    <div class="cta-buttons" data-aos="fade-up" data-aos-delay="300">
+                        <a href="#portfolio" class="btn btn-primary">Voir mon parcours</a>
+                        <a href="#contact" class="btn btn-outline">Me contacter</a>
+                    </div>
+
+                    <div class="hero-stats" data-aos="fade-up" data-aos-delay="400">
+                        <div class="stat-item">
+                            <span class="stat-number">20+</span>
+                            <span class="stat-label">Années d’expérience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">200+</span>
+                            <span class="stat-label">Opérations dirigées</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Récompenses & distinctions</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="hero-image">
+                        <img src="assets/img/profile/allasane4.jpeg" width="100%" alt="Portrait Alassane ADOM"
+                            class="img-fluid" data-aos="zoom-out" data-aos-delay="300">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-primary text-white py-5 contact-section">
+        <div id="font" class="container">
+            <div class="row align-items-center">
+
+                <!-- Colonne 1 : Téléphone -->
+                <div class="col-12 col-md-4 mb-2 fs-4 d-flex align-items-center">
+                    <i class="bi bi-telephone-fill me-2"></i>
+                    <span>+229 01 95 88 79 25</span>
+                </div>
+
+                <!-- Colonne 2 : Email (centrée) -->
+                <div class="col-12 col-md-4 mb-2 fs-4 d-flex align-items-center justify-content-center">
+                    <i class="bi bi-envelope-fill me-2"></i>
+                    <span>julienhounkpegmail.com</span>
+                </div>
+
+                <!-- Colonne 3 : Réseaux sociaux (alignés à droite) -->
+                <div class="col-12 col-md-4 d-flex  fs-4 align-items-center justify-content-md-end">
+                    <a href="#" class="text-white me-2" title="LinkedIn"><i class="bi bi-linkedin fs-4"></i></a>
+                    <a href="#" class="text-white me-2" title="Twitter"><i class="bi bi-twitter-x fs-4"></i></a>
+                    <a href="#" class="text-white me-2" title="Facebook"><i class="bi bi-facebook fs-4"></i></a>
+                    <a href="#" class="text-white" title="YouTube"><i class="bi bi-youtube fs-4"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </section><br>
+
+
+    <div class="container  ">
+
+        <!-- En-tête -->
+        <div class="header d-flex justify-content-between">
+            <div class="container section-title">
+                <h2 style="font-size: 40px;">PROFIL PROFESSIONNEL</h2>
+                <div class="title-shape">
+                    <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor"
+                            stroke-width="2"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="separator"></div>
+
+        <!-- Onglets -->
+        <div class="tabs-container">
+            <ul class="tabs">
+
+                <li class="tab-item ">
+                    <button class="tab-button text-uppercase" [class.active]="activeTab === 'presentation'"
+                        (click)="showTab('presentation')">
+                        <i class="fas fa-user-shield"></i> Présentation
+                    </button>
+                </li>
+
+                <li class="tab-item">
+                    <button class="tab-button text-uppercase" [class.active]="activeTab === 'competences'"
+                        (click)="showTab('competences')">
+                        <i class="fas fa-shield-alt"></i> Compétences
+                    </button>
+                </li>
+
+                <li class="tab-item">
+                    <button class="tab-button text-uppercase" [class.active]="activeTab === 'education'"
+                        (click)="showTab('education')">
+                        <i class="fas fa-graduation-cap"></i> Formation
+                    </button>
+                </li>
+
+                <li class="tab-item">
+                    <button class="tab-button text-uppercase" [class.active]="activeTab === 'publications'"
+                        (click)="showTab('publications')">
+                        <i class="fas fa-network-wired"></i> Contributions
+                    </button>
+                </li>
+
+                <li class="tab-item">
+                    <button class="tab-button text-uppercase" [class.active]="activeTab === 'publications'"
+                        (click)="showTab('publications')">
+                        <i class="fas fa-network-wired"></i> Publications
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Contenu -->
+        <div class="content-section">
+
+            <!-- Présentation -->
+            <div *ngIf="activeTab === 'presentation'" class="tab-content active">
+                <div class="content-card">
+
+                    <div class="row align-items-center">
+
+                        <!-- Colonne image -->
+                        <div class="col-md-4 text-center mb-3 mb-md-0">
+                            <img src="assets/img/profile/allassane2.jpeg" alt="Profil professionnel"
+                                class="img-fluid profile-img">
+                        </div>
+
+                        <!-- Colonne texte -->
+                        <div class="col-md-8 fs-6">
+                            <h2 class="card-title">Présentation</h2>
+
+                            <p>
+                                Monsieur <strong>ADOM ALASSANE Waïdou</strong>, Commissaire Major de Police,
+                                cumule près de <strong>25 années de service</strong> au sein de la Police du Bénin.
+                            </p>
+
+                            <p>
+                                Expert en <strong>Police Technique et Scientifique</strong>,
+                                spécialiste des technologies de l’information et de la cybersécurité.
+                            </p>
+
+                            <p>
+                                Instructeur à l’École Nationale Supérieure de Police,
+                                enseignant universitaire et Délégué à la Protection des Données (DPO).
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Compétences -->
+            <div *ngIf="activeTab === 'competences'" class="tab-content">
+                <div class="content-card modern-card">
+
+                    <h2 class="card-title mb-4">Compétences Techniques</h2>
+
+                    <div class="row">
+
+                        <!-- Colonne gauche -->
+                        <div class="col-md-6 ">
+
+                            <div class="skill-item">
+                                <div class="skill-header fs-6">
+                                    <span>Conception & Ingénierie Logicielle</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-header fs-6">
+                                    <span>Développement (Java, Python, PHP, ASP.NET)</span>
+                                    <span>88%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 88%"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-header fs-6">
+                                    <span>Laravel & WordPress</span>
+                                    <span>82%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 82%"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-header fs-6">
+                                    <span>Administration Système & Script Shell</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%"></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Colonne droite -->
+                        <div class="col-md-6">
+
+                            <div class="skill-item">
+                                <div class="skill-header fs-6">
+                                    <span>Cybersécurité & Tests d’Intrusion</span>
+                                    <span>78%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 78%"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-header fs-6">
+                                    <span>Réponse aux Incidents & Monitoring (ELK)</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 75%"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-header fs-6">
+                                    <span>Réseaux & Protocoles de Routage</span>
+                                    <span>77%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 77%"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-header fs-6">
+                                    <span>Bases de Données (MySQL, SQLite, Oracle)</span>
+                                    <span>83%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 83%"></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Certification -->
+                    <div class="mt-4 ">
+                        <span class="badge bg-success px-3 py-2 fs-6">
+                            Formateur certifié – Systèmes des Nations Unies
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <!-- Formation -->
+            <div *ngIf="activeTab === 'education'" class="tab-content">
+                <div class="timeline-container">
+
+                    <h2 class="card-title mb-4">Education</h2>
+
+
+                    <!-- TIMELINE -->
+
+                    <!-- Début de carrière -->
+                    <div class="timeline-card left-card fs-6">
+                        <span class="year-badge">≈ 2003</span>
+                        <h3 class="card-title">Début de carrière</h3>
+                        <p class="fs-5">Commissaire de Police</p>
+                        <ul class="fs-6">
+                            <li>Début en tant que Commissaire de Police</li>
+                            <li>Expérience nationale</li>
+                            <li>Expérience internationale</li>
+                        </ul>
+                    </div>
+
+                    <!-- Expérience internationale -->
+                    <div class="timeline-card right-card">
+                        <span class="year-badge">≈ 2003 - 2022</span>
+                        <h3 class="card-title">Expérience Internationale</h3>
+                        <p>20 ans d'expérience</p>
+                        <ul>
+                            <li>Mission internationale en tant que Commissaire de Police</li>
+                            <li>Coopération policière internationale</li>
+                            <li>Expérience accumulée sur deux décennies</li>
+                        </ul>
+                    </div>
+
+                    <!-- Formation Master -->
+                    <div class="timeline-card left-card">
+                        <span class="year-badge">2022</span>
+                        <h3 class="card-title">Formation Spécialisée</h3>
+                        <p>Master en Droit du Numérique</p>
+                        <ul>
+                            <li>Obtention du Master</li>
+                            <li>IRGB-Africa</li>
+                            <li>Spécialisation en droit du numérique</li>
+                        </ul>
+                    </div>
+
+                    <!-- Expérience nationale -->
+                    <div class="timeline-card right-card">
+                        <span class="year-badge">≈ 2003 - Présent</span>
+                        <h3 class="card-title">Expérience Nationale</h3>
+                        <p>20 ans d'expérience</p>
+                        <ul>
+                            <li>Commissaire de Police en service national</li>
+                            <li>Expérience approfondie dans le cadre national</li>
+                            <li>Management et direction opérationnelle</li>
+                        </ul>
+                    </div>
+
+                    <!-- Compétences actuelles -->
+                    <div class="timeline-card left-card">
+                        <span class="year-badge">Présent</span>
+                        <h3 class="card-title">Double Expertise</h3>
+                        <p>Profil Unique</p>
+                        <ul>
+                            <li><strong>Commissaire de Police</strong> avec 20 ans d'expérience</li>
+                            <li><strong>Expert en Droit du Numérique</strong> (Master 2022)</li>
+                            <li>Expérience nationale et internationale combinée</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contributions -->
+            <div *ngIf="activeTab === 'publications'" class="tab-content">
+                <div class="content-card">
+                    <h2 class="card-title mb-4">Contributions & Initiatives</h2>
+
+                    <div class="row">
+
+                        <!-- Colonne gauche -->
+                        <div class="col-md-6">
+                            <div class="contribution-item mb-3">
+                                <div class="contribution-icon">
+                                    <i class="bi bi-award"></i>
+                                </div>
+                                <div class="contribution-details">
+                                    <h5>Lauréat du 2ᵉ prix DSI Awards 2022</h5>
+                                    <p class="text-muted">Récompense d'excellence dans le numérique</p>
+                                </div>
+                            </div>
+
+
+
+                            <div class="contribution-item mb-3">
+                                <div class="contribution-icon">
+                                    <i class="bi bi-diagram-3"></i>
+                                </div>
+                                <div class="contribution-details">
+                                    <h5>Réseau National d'Administration</h5>
+                                    <p class="text-muted">Contribution au développement de l'infrastructure</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Colonne droite -->
+                        <div class="col-md-6">
+                            <div class="contribution-item mb-3">
+                                <div class="contribution-icon">
+                                    <i class="bi bi-envelope"></i>
+                                </div>
+                                <div class="contribution-details">
+                                    <h5>Mailing gouvernemental <span class="domain">gouv.bj</span></h5>
+                                    <p class="text-muted">Mise en œuvre de la solution de communication</p>
+                                </div>
+                            </div>
+
+                            <div class="contribution-item mb-3">
+                                <div class="contribution-icon">
+                                    <i class="bi bi-credit-card"></i>
+                                </div>
+                                <div class="contribution-details">
+                                    <h5>e-Procurement & paiement en ligne</h5>
+                                    <p class="text-muted">Participation à la digitalisation des achats publics</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="contribution-item mb-3">
+                                <div class="contribution-icon">
+                                    <i class="bi bi-building"></i>
+                                </div>
+                                <div class="contribution-details">
+                                    <h5>Cabinet juridique numérique <span class="highlight">360 Conseils</span></h5>
+                                    <p class="text-muted">Membre actif du cabinet spécialisé</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+    <section id="resume" class="resume section light-background ">
+
+        <!-- Section Title -->
+        <br><br><br>
+        <div class="container section-title">
+            <h2>Curriculum Vitae</h2>
+            <p>Officier de Police expérimenté avec une solide expertise en cybersécurité, gestion de crises,
+                commandement opérationnel et administration des systèmes d'information.</p>
+        </div> <br>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="row">
+                <div style="font-family: 'Montserrat-Medium';" class="col-lg-6" data-aos="fade-right"
+                    data-aos-delay="200">
+                    <div class="experience-section">
+                        <div class="section-header">
+                            <h2><i class="bi bi-briefcase"></i> Parcours Professionnel</h2>
+                            <p style="font-size: 1.1rem;" id="font" class="section-subtitle ">Expérience opérationnelle
+                                et managériale au sein de la Police Républicaine et missions internationales.</p>
+                        </div>
+
+                        <div class="experience-cards">
+                            <div style="font-family: 'Montserrat-Medium';" class="experience-card" data-aos="zoom-in"
+                                data-aos-delay="300">
+                                <div class="card-header">
+                                    <div class="role-info">
+                                        <h3 id="font">Chef Service des Opérations</h3>
+                                        <h4>Centre de Documentation de Sécurité Publique – Ministère de la Justice et de
+                                            la Législation, Cotonou</h4>
+                                    </div>
+                                    <span class="duration">09/2024 - Présent</span>
+                                </div>
+
+                                <div style="font-family: 'Montserrat-Medium';" class="card-body">
+                                    <p>Placé sous l'autorité du Directeur du Centre, chargé de la coordination et du
+                                        suivi des activités des points focaux du CDSP sur l'ensemble du territoire
+                                        national.</p>
+                                    <ul class="achievements fs-5">
+                                        <li class="fs-6">Coordination de la planification, conduite et suivi des
+                                            activités des points focaux</li>
+                                        <li class="fs-6">Supervision des activités, recueil des rapports mensuels et
+                                            retour d'informations au Directeur</li>
+                                        <li class="fs-6">Traitement des demandes d'informations des services
+                                            d'application de la loi</li>
+                                        <li class="fs-6">Assistance du Directeur sur l'opérationnalisation des missions
+                                            du CDSP</li>
+                                        <li class="fs-6">Assurance de l'intérim en cas d'absence du Directeur</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div style="font-family: 'Montserrat-Medium';" class="experience-card" data-aos="zoom-in"
+                                data-aos-delay="300">
+                                <div class="card-header">
+                                    <div class="role-info">
+                                        <h3 id="font">Commandant Adjoint du Poste de Commandement et de Service de
+                                            l'Unité d'Opérations</h3>
+                                        <h4>Centre de Prévention et de Gestion des Crises (CPGC) - Direction générale de
+                                            la Police républicaine, Cotonou</h4>
+                                    </div>
+                                    <span class="duration">01/2024 - 09/2024</span>
+                                </div>
+                                <div style="font-family: 'Montserrat-Medium';" class="card-body">
+                                    <p>Chargé de la coordination administrative et opérationnelle des compagnies mobiles
+                                        d'interventions, du groupement de protection des Hautes Personnalités et du
+                                        groupement spécial polyvalent d'intervention.</p>
+                                    <ul class="achievements fs-5">
+                                        <li class="fs-6">Élaboration des ordres d'opérations et ordres complémentaires
+                                            de transmission</li>
+                                        <li class="fs-6">Élaboration des plans d'urgence de gestion de crises</li>
+                                        <li class="fs-6">Élaboration des plans de sécurisation des infrastructures
+                                            critiques/vitales</li>
+                                        <li class="fs-6">Mise en œuvre des Procédures de Protection des Hautes
+                                            Personnalités (PPHP)</li>
+                                        <li class="fs-6">Formation et recyclage du personnel dans divers domaines
+                                            spécialisés</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="experience-card" data-aos="zoom-in" data-aos-delay="400">
+                                <div class="card-header">
+                                    <div class="role-info">
+                                        <h3>Chef Service Logiciel et Protection des Systèmes d'Information • Analyste
+                                            SOC</h3>
+                                        <h4>Direction générale de la Police républicaine, Cotonou</h4>
+                                    </div>
+                                    <span class="duration">09/2022 - 01/2024</span>
+                                </div>
+                                <div class="card-body">
+                                    <p>Responsable de la sécurité informatique de l'ensemble du réseau informatique de
+                                        la Police et de l'intégrité des données des plateformes.</p>
+                                    <ul class="achievements">
+                                        <li class="fs-6">Conception, validation et expertise des logiciels policiers
+                                        </li>
+                                        <li class="fs-6">Management d'une équipe de techniciens informatiques</li>
+                                        <li class="fs-6">Mise en place des adresses mails professionnels</li>
+                                        <li class="fs-6">Déploiement du réseau de connexion national</li>
+                                        <li class="fs-6">Réalisation du site web institutionnel www.dgpr.bj</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="experience-card" data-aos="zoom-in" data-aos-delay="400">
+                                <div class="card-header">
+                                    <div class="role-info">
+                                        <h3>Commissaire de l'arrondissement de Avrankou • Chef d'Unité</h3>
+                                        <h4>Direction départementale de la Police républicaine de l'Ouémé, Porto-Novo
+                                        </h4>
+                                    </div>
+                                    <span class="duration">02/2022 - 09/2022</span>
+                                </div>
+                                <div class="card-body">
+                                    <p>Responsable de la sécurité publique, chef de la Police Administrative et
+                                        Judiciaire avec 15 éléments sous ma responsabilité.</p>
+                                    <ul class="achievements">
+                                        <li class="fs-6">Conduite des procédures judiciaires et direction des enquêtes
+                                        </li>
+                                        <li class="fs-6">Coordination des patrouilles et missions de sensibilisation
+                                            dans 56 villages</li>
+                                        <li class="fs-6">Démantèlement d'un réseau de cybercriminels actif depuis des
+                                            années</li>
+                                        <li class="fs-6">Enquête sur des malversations de warrantage dans la filière
+                                            huile de palme</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right column -->
+                <div style="font-family: 'Montserrat-Medium';" class="col-lg-6" data-aos="fade-left"
+                    data-aos-delay="200">
+                    <div class="education-section">
+                        <div class="section-header">
+                            <h2><i class="bi bi-mortarboard"></i>Certifications</h2>
+                            <p style="font-size: 1.1rem;" class="section-subtitle">Formations spécialisées en
+                                cybersécurité, gestion de crise et développement professionnel.</p>
+                        </div>
+
+                        <div class="education-timeline">
+                            <div class="timeline-track"></div>
+
+                            <div class="education-item" data-aos="slide-up" data-aos-delay="300">
+                                <div class="timeline-marker"></div>
+                                <div class="education-content">
+                                    <div class="degree-header">
+                                        <h3>Certificat de formateur : Protection des Données à caractère personnel</h3>
+                                        <span class="year">2024</span>
+                                    </div>
+                                    <h4 class="institution">Interpol</h4>
+                                    <p style="font-size: 1.1rem;" class="">Formation spécialisée sur la protection des
+                                        données personnelles dans un contexte policier international.</p>
+                                </div>
+                            </div>
+
+                            <div class="education-item" data-aos="slide-up" data-aos-delay="300">
+                                <div class="timeline-marker"></div>
+                                <div class="education-content">
+                                    <div class="degree-header">
+                                        <h3>Certificat : Gestion des risques dans un contexte d'incertitude et de crises
+                                        </h3>
+                                        <span class="year">2023</span>
+                                    </div>
+                                    <h4 class="institution">IDEP</h4>
+                                    <p style="font-size: 1.1rem;">Formation avancée sur la gestion stratégique des
+                                        risques et la conduite en situation de crise.</p>
+                                </div>
+                            </div>
+
+                            <div class="education-item" data-aos="slide-up" data-aos-delay="300">
+                                <div class="timeline-marker"></div>
+                                <div class="education-content">
+                                    <div class="degree-header">
+                                        <h3>CyberOps Cisco 200-201</h3>
+                                        <span class="year">2022</span>
+                                    </div>
+                                    <h4 class="institution">Cisco Networking Academy</h4>
+                                    <p style="font-size: 1.1rem;">Certification professionnelle en opérations de
+                                        cybersécurité et analyse des menaces.</p>
+                                </div>
+                            </div>
+
+                            <div class="education-item" data-aos="slide-up" data-aos-delay="400">
+                                <div class="timeline-marker"></div>
+                                <div class="education-content">
+                                    <div class="degree-header">
+                                        <h3>Formation d'Instructeur en Cybersécurité (CyberOps Associate)</h3>
+                                        <span class="year">2022</span>
+                                    </div>
+                                    <h4 class="institution">Network Training Academy (NTA)</h4>
+                                    <p style="font-size: 1.1rem;">Qualification pour l'enseignement et la formation en
+                                        cybersécurité opérationnelle.</p>
+                                </div>
+                            </div>
+
+                            <div class="education-item" data-aos="slide-up" data-aos-delay="400">
+                                <div class="timeline-marker"></div>
+                                <div class="education-content">
+                                    <div class="degree-header">
+                                        <h3>NSE 1 & NSE 2 Network Security Associate</h3>
+                                        <span class="year">2018-2019</span>
+                                    </div>
+                                    <h4 class="institution">Fortinet</h4>
+                                    <p style="font-size: 1.1rem;">Certifications en sécurité réseau et gestion des
+                                        infrastructures sécurisées.</p>
+                                </div>
+                            </div>
+
+                            <div class="education-item" data-aos="slide-up" data-aos-delay="500">
+                                <div class="timeline-marker"></div>
+                                <div class="education-content">
+                                    <div class="degree-header">
+                                        <h3>Assistant • Chef Sous-Cellule Études, Conception et Mise en œuvre des
+                                            Formations (UNPOL)</h3>
+                                        <span class="year">2013-2016</span>
+                                    </div>
+                                    <h4 class="institution">MONUSCO, Kinshasa RDC</h4>
+                                    <p style="font-size: 1.1rem;">Mission internationale : animation de modules de
+                                        formation, renforcement des capacités de la Police Nationale Congolaise, gestion
+                                        des formations pour les UNPOL.</p>
+                                </div>
+                            </div>
+
+                            <!-- Expériences supplémentaires condensées -->
+                            <div class="education-item" data-aos="slide-up" data-aos-delay="500">
+                                <div class="timeline-marker"></div>
+                                <div class="education-content">
+                                    <div class="degree-header">
+                                        <h3>Autres Expériences Significatives</h3>
+                                        <span class="year">2016-2022</span>
+                                    </div>
+                                    <p style="font-size: 1.1rem;">
+                                        • Commissaire de l'arrondissement de Djèrègbé (2020-2022)<br>
+                                        • Adjoint à la Cellule Aéroportuaire Anti-Trafics (2018-2020)<br>
+                                        • Chef Cabinet du Directeur général de la Police nationale (2016-2018)<br>
+                                        • Participation aux opérations internationales COCAIR, Ailes Africaines, COLIBRI
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section light-background mb-4 p-4">
+
+        <!-- Section Title -->
+        <div class="container section-title mb-4" data-aos="fade-up">
+            <h2>Avis de quelques collaborateurs</h2>
+            <div class="title-shape">
+                <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor"
+                        stroke-width="2"></path>
+                </svg>
+            </div>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="row gy-4">
+
+                <!-- Témoignage 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-item">
+                        <h2>Un expert numérique indispensable</h2>
+                        <p>
+                            Son expertise en cybersécurité et en ingénierie logicielle a profondément renforcé la
+                            résilience numérique de notre institution.
+                        </p>
+                        <p>
+                            Ses conseils stratégiques ont permis d'améliorer la gouvernance des systèmes d’information
+                            et
+                            la protection des données sensibles.
+                        </p>
+                        <div class="profile d-flex align-items-center">
+                            <img src="assets/img/person/person-m-7.webp" class="profile-img" alt="">
+                            <div class="profile-info">
+                                <h3>Commissaire Principal Didier A.</h3>
+                                <span>Directeur Technique — Police Républicaine</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Témoignage 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-item">
+                        <h2>Une maîtrise exceptionnelle de la cybersécurité</h2>
+                        <p>
+                            J’ai eu l’honneur de collaborer avec lui sur plusieurs projets sensibles. Sa capacité à
+                            détecter, analyser et neutraliser les risques cyber est impressionnante.
+                        </p>
+                        <p>
+                            C’est un professionnel calme, précis, et doté d’un sens aigu de la responsabilité.
+                            Son apport a été déterminant dans la sécurisation de plusieurs plateformes critiques.
+
+                        </p>
+                        <div class="profile d-flex align-items-center">
+                            <img src="assets/img/person/person-f-8.webp" class="profile-img" alt="">
+                            <div class="profile-info">
+                                <h3>Capitaine Mireille D.</h3>
+                                <span>Experte Sécurité Numérique</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Témoignage 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-item">
+                        <h2>Un formateur exigeant et inspirant</h2>
+                        <p>
+                            Son passage en tant qu’instructeur nous a profondément marqué.
+                            Pédagogue, exigeant et passionné, il transmet ses connaissances avec clarté et précision.
+                        </p>
+                        <p>
+                            Grâce à lui, j’ai acquis des compétences solides en police judiciaire numérique et en
+                            analyse de systèmes. Un mentor exceptionnel. Toujours rigoureux, méthodique et orienté
+                            résultats.
+                        </p>
+                        <div class="profile d-flex align-items-center">
+                            <img src="assets/img/person/person-f-10.webp" class="profile-img" alt="">
+                            <div class="profile-info">
+                                <h3>Élève Commissaire S. Houéssou</h3>
+                                <span>Promotion 2024 — Centre de Formation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section> <br>
+
+
+
+
+    <!-- /Testimonials Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Services</h2>
+            <div class="title-shape">
+                <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor"
+                        stroke-width="2"></path>
+                </svg>
+            </div>
+            <p>Prestations proposées dans le domaine de la sécurité, de la prévention et de l’assistance aux citoyens.
+            </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h2 class="fw-bold mb-4 servies-title">
+                        Des services professionnels pour votre sécurité
+                    </h2>
+                    <p class="mb-4">
+                        Assistance, prévention, médiation, sensibilisation et accompagnement pour renforcer
+                        la sécurité des personnes, des entreprises et des communautés.
+                    </p>
+                </div>
+
+                <div class="col-lg-8">
+                    <div class="row g-4">
+
+                        <!-- Service 1 -->
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                            <div class="service-item">
+                                <i class="bi bi-shield-check icon"></i>
+                                <h3><a href="service-details.html">Sécurité & Protection</a></h3>
+                                <p>Assistance, présence dissuasive, protection rapprochée et sécurisation
+                                    d’événements ou de zones sensibles.</p>
+                            </div>
+                        </div>
+
+                        <!-- Service 2 -->
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                            <div class="service-item">
+                                <i class="bi bi-people icon"></i>
+                                <h3><a href="service-details.html">Médiation & Gestion de Conflits</a></h3>
+                                <p>Intervention pour résoudre les litiges, apaiser les tensions
+                                    et accompagner les parties vers une solution pacifique.</p>
+                            </div>
+                        </div>
+
+                        <!-- Service 3 -->
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+                            <div class="service-item">
+                                <i class="bi bi-broadcast icon"></i>
+                                <h3><a href="service-details.html">Sensibilisation & Prévention</a></h3>
+                                <p>Organisation de séances éducatives sur la sécurité routière,
+                                    la délinquance, les risques, et les comportements citoyens.</p>
+                            </div>
+                        </div>
+
+                        <!-- Service 4 -->
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+                            <div class="service-item">
+                                <i class="bi bi-file-earmark-text icon"></i>
+                                <h3><a href="service-details.html">Assistance & Orientation Administrative</a></h3>
+                                <p>Aide pour les plaintes, démarches liées aux documents officiels,
+                                    déclarations ou procédures légales.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- /Services Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section light-background py-5">
+        <div class="container" data-aos="fade-up">
+
+            <div class="row g-5">
+
+                <!-- Informations de contact -->
+                <div class="col-lg-6">
+                    <div class="content" data-aos="fade-right" data-aos-delay="200">
+                        <!-- Section Title -->
+                        <div class="container section-title" data-aos="fade-up">
+                            <h2>Contact</h2>
+                            <div class="title-shape">
+                                <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none"
+                                        stroke="currentColor" stroke-width="2"></path>
+                                </svg>
+                            </div>
+                        </div>
+
+
+
+                        <p id="font" class="text-muted fs-6 mb-4">
+                            Pour toute demande professionnelle, administrative ou information complémentaire,
+                            veuillez utiliser les coordonnées ci-dessous ou soumettre une requête via le formulaire.
+                        </p>
+                        <div class="info-contact">
+
+                            <!-- Email -->
+                            <div class="info-item d-flex align-items-start">
+                                <i class="bi bi-envelope-at fs-4 me-3"></i>
+                                <div>
+                                    <h6>Email</h6>
+                                    <p>contactexample.com</p>
+                                </div>
+                            </div>
+
+                            <!-- Téléphone -->
+                            <div class="info-item d-flex align-items-start">
+                                <i class="bi bi-telephone fs-4 me-3"></i>
+                                <div>
+                                    <h6>Téléphone</h6>
+                                    <p>+229 01 95 88 79 25</p>
+                                </div>
+                            </div>
+
+                            <!-- Localisation -->
+                            <div class="info-item d-flex align-items-start">
+                                <i class="bi bi-geo-alt fs-4 me-3"></i>
+                                <div>
+                                    <h6>Localisation</h6>
+                                    <p>Cotonou, Littoral, Bénin</p>
+                                </div>
+                            </div>
+
+                            <!-- Réseaux sociaux -->
+                            <div class="info-item d-flex align-items-start">
+                                <i class="bi bi-share fs-4 me-3"></i>
+                                <div>
+                                    <h6>Réseaux sociaux</h6>
+
+                                    <div class="social-links">
+                                        <a href="#" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                                        <a href="#" title="Twitter"><i class="bi bi-twitter-x"></i></a>
+                                        <a href="#" title="Facebook"><i class="bi bi-facebook"></i></a>
+                                        <a href="#" title="YouTube"><i class="bi bi-youtube"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <!-- Formulaire de contact -->
+                <div class="col-lg-6">
+                    <div class="contact-form card border-0 shadow-sm" data-aos="fade-left" data-aos-delay="300">
+                        <div class="card-body p-4 p-lg-5">
+
+                            <form action="forms/contact.php" method="post" class="php-email-form">
+
+                                <div class="row gy-4">
+
+                                    <div class="col-12">
+                                        <label class="form-label fw-semibold">Nom et prénoms</label>
+                                        <input type="text" name="name" class="form-control" required>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label class="form-label fw-semibold">Adresse email </label>
+                                        <input type="email" name="email" class="form-control" required>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label class="form-label fw-semibold">Objet de la demande</label>
+                                        <input type="text" name="subject" class="form-control" required>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label class="form-label fw-semibold">Message</label>
+                                        <textarea name="message" rows="6" class="form-control" required></textarea>
+                                    </div>
+
+                                    <div class="col-12 text-center">
+                                        <div class="loading">Traitement en cours...</div>
+                                        <div class="error-message"></div>
+                                        <div class="sent-message">Votre message a été transmis avec succès.</div>
+
+                                        <button type="submit" style="background-color: #053f72; color: white;"
+                                            class="btn w-100 py-2">
+                                            Envoyer votre message
+                                        </button>
+                                    </div>
+
+                                </div>
+
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- /Contact Section -->
+
+</main>
+
+<footer id="footer" class="footer text-center py-3">
+
+    <div class="container d-flex justify-content-center">
+        <div class="copyright">
+            <p class="m-0">
+                © <span>Copyright</span>
+                <strong class="px-1 sitename">allassanegmail.com</strong>
+                <span>All Rights Reserved</span>
+            </p>
+        </div>
+    </div>
+
+</footer>
+
+<div class="scroll-to-top" (click)="scrollToTop()">
+    <i class="pi pi-arrow-up"></i>
+</div>
