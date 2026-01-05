@@ -721,3 +721,97 @@ p {
     font-size: 0.9rem;
     margin-bottom: 0;
 }
+
+/* Desktop */
+.navmenu ul {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* Mobile */
+@media (max-width: 1199px) {
+
+    .navmenu {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: #fff;
+        transition: right 0.3s ease;
+        padding-top: 2rem;
+        z-index: 999;
+    }
+
+    .navmenu.active {
+        right: 0;
+    }
+
+    .navmenu ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+    }
+
+    .mobile-nav-toggle {
+        background: none;
+        border: none;
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+}
+
+/* Desktop */
+.navmenu ul {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Mobile */
+@media (max-width: 1199px) {
+
+  .navmenu {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: #fff;
+    transition: right 0.3s ease-in-out;
+    padding-top: 2rem;
+    z-index: 999;
+  }
+
+  .navmenu.active {
+    right: 0;
+  }
+
+  .navmenu ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.3rem;
+  }
+
+  .mobile-nav-toggle {
+    background: none;
+    border: none;
+    font-size: 1.9rem;
+    cursor: pointer;
+  }
+}
+.header .container-fluid {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  gap: 1rem; /* 👈 espace entre logo et burger */
+}
+
+/* Réduction du titre sur mobile */
+@media (max-width: 576px) {
+  .sitename {
+    font-size: 1.1rem;
+    max-width: 75%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

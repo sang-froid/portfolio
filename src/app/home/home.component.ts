@@ -8,6 +8,7 @@ import { saveAs } from 'file-saver';
 import Typed from 'typed.js';
 import { FooterComponent } from '../footer/footer.component';
 import { HeaderComponent } from '../header/header.component';
+import { RouterModule } from '@angular/router';
 
 interface Contact {
   nom: string;
@@ -24,7 +25,7 @@ interface Contact {
     FormsModule,
     HttpClientModule,
     CommonModule,
-
+    RouterModule,
     HeaderComponent,
     FooterComponent
   ],

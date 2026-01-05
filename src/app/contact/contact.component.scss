@@ -30,11 +30,12 @@ body {
 
 .hero-section {
     background: linear-gradient(135deg, var(--primary-color) 0%, #1a2530 100%);
-   // color: white;
+    color: white;
     padding: 4rem 0;
     margin-bottom: 3rem;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .hero-section::before {

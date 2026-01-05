@@ -1,27 +1,26 @@
 <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid d-flex align-items-center justify-content-between">
+  <div class="container-fluid d-flex align-items-center justify-content-between">
 
-        <!-- Logo à gauche -->
-        <a href="index.html" class="logo d-flex align-items-center">
-            <!-- <img src="assets/img/logo.webp" alt=""> -->
-            <h1 class="sitename mb-0">Alassane ADOM</h1>
-        </a>
+    <!-- Logo -->
+    <a routerLink="/" class="logo d-flex align-items-center">
+      <h1 class="sitename mb-0">Waïdou ADOM ALASSANE</h1>
+    </a>
 
-        <!-- Menu et liens sociaux regroupés à droite -->
-        <div class="d-flex align-items-center">
+    <!-- Navigation -->
+    <nav id="navmenu" class="navmenu" [ngClass]="{ 'active': isMenuOpen }">
+      <ul class="mb-0 list-unstyled">
+        <li><a routerLink="/" (click)="closeMenu()" class="active">Accueil</a></li>
+        <li><a href="#about" (click)="closeMenu()">À propos</a></li>
+        <li><a href="#experience" (click)="closeMenu()">Expérience</a></li>
+        <li><a routerLink="/distinction" (click)="closeMenu()">Distinctions</a></li>
+        <li><a routerLink="/contact" (click)="closeMenu()">Contact</a></li>
+      </ul>
+    </nav>
 
-            <!-- Menu -->
-            <nav id="navmenu" class="navmenu me-3">
-                <ul class="d-flex mb-0 list-unstyled">
-                    <li><a routerLink="/" href="javascript:void(0)" class="active">Accueil</a></li>
-                    <li><a href="#about">À propos</a></li>
-                    <li><a href="#experience">Expérience</a></li>
-                    <li><a routerLink="/distinction" href="javascript:void(0)">DISTINCTIONS </a></li>
-                    <li><a routerLink="/contact" href="javascript:void(0)">Contact</a></li>
-                </ul>
-                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-            </nav>
-        </div>
+    <!-- Burger -->
+    <button class="mobile-nav-toggle d-xl-none" (click)="toggleMenu()">
+      <i class="bi" [ngClass]="isMenuOpen ? 'bi-x' : 'bi-list'"></i>
+    </button>
 
-    </div>
+  </div>
 </header>

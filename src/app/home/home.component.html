@@ -1,4 +1,4 @@
-    <app-header></app-header>
+<app-header></app-header>
 
 
 <main class="main">
@@ -13,8 +13,8 @@
                         avec une expérience solide dans le maintien de l’ordre et la gestion des équipes.</p>
 
                     <div class="cta-buttons" data-aos="fade-up" data-aos-delay="300">
-                        <a href="#portfolio" class="btn btn-primary">Voir mon parcours</a>
-                        <a href="#contact" class="btn btn-outline">Me contacter</a>
+                        <a href="#about" class="btn btn-primary">Voir mon parcours</a>
+                        <a routerLink="/contact" href="javascript:void(0)" class="btn btn-outline">Me contacter</a>
                     </div>
 
                     <div class="hero-stats" data-aos="fade-up" data-aos-delay="400">
@@ -22,13 +22,10 @@
                             <span class="stat-number">20+</span>
                             <span class="stat-label">Années d’expérience</span>
                         </div>
+
                         <div class="stat-item">
-                            <span class="stat-number">200+</span>
-                            <span class="stat-label">Opérations dirigées</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">50+</span>
-                            <span class="stat-label">Récompenses & distinctions</span>
+                            <span class="stat-number">4+</span>
+                            <span class="stat-label">Distinctions</span>
                         </div>
                     </div>
                 </div>
@@ -45,31 +42,44 @@
 
     <section class="bg-primary text-white py-5 contact-section">
         <div id="font" class="container">
-            <div class="row align-items-center">
+            <div class="row align-items-center text-center text-md-start">
 
-                <!-- Colonne 1 : Téléphone -->
-                <div class="col-12 col-md-4 mb-2 fs-4 d-flex align-items-center">
+                <!-- Téléphone -->
+                <div class="col-12 col-md-4 mb-3 fs-4 
+                  d-flex justify-content-center justify-content-md-start align-items-center">
                     <i class="bi bi-telephone-fill me-2"></i>
                     <span>+229 01 95 88 79 25</span>
                 </div>
 
-                <!-- Colonne 2 : Email (centrée) -->
-                <div class="col-12 col-md-4 mb-2 fs-4 d-flex align-items-center justify-content-center">
+                <!-- Email -->
+                <div class="col-12 col-md-4 mb-3 fs-4 
+                  d-flex justify-content-center align-items-center">
                     <i class="bi bi-envelope-fill me-2"></i>
-                    <span>julienhounkpegmail.com</span>
+                    <span>julienhounkpe&:64gmail.com</span>
                 </div>
 
-                <!-- Colonne 3 : Réseaux sociaux (alignés à droite) -->
-                <div class="col-12 col-md-4 d-flex  fs-4 align-items-center justify-content-md-end">
-                    <a href="#" class="text-white me-2" title="LinkedIn"><i class="bi bi-linkedin fs-4"></i></a>
-                    <a href="#" class="text-white me-2" title="Twitter"><i class="bi bi-twitter-x fs-4"></i></a>
-                    <a href="#" class="text-white me-2" title="Facebook"><i class="bi bi-facebook fs-4"></i></a>
-                    <a href="#" class="text-white" title="YouTube"><i class="bi bi-youtube fs-4"></i></a>
+                <!-- Réseaux sociaux -->
+                <div class="col-12 col-md-4 fs-4 
+                  d-flex justify-content-center justify-content-md-end align-items-center">
+                    <a href="#" class="text-white me-3" title="LinkedIn">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a href="#" class="text-white me-3" title="Twitter">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+                    <a href="#" class="text-white me-3" title="Facebook">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="#" class="text-white" title="YouTube">
+                        <i class="bi bi-youtube"></i>
+                    </a>
                 </div>
 
             </div>
         </div>
-    </section><br>
+    </section>
+    <br>
+
 
 
     <div class="container  " id="about">
@@ -90,7 +100,7 @@
         <div class="separator"></div>
 
         <!-- Onglets -->
-        <div class="tabs-container" >
+        <div class="tabs-container">
             <ul class="tabs">
 
                 <li class="tab-item ">
@@ -121,12 +131,12 @@
                     </button>
                 </li>
 
-               
+
             </ul>
         </div>
 
         <!-- Contenu -->
-        <div class="content-section" >
+        <div class="content-section">
 
             <!-- Présentation -->
             <div *ngIf="activeTab === 'presentation'" class="tab-content active">
@@ -765,7 +775,7 @@
     </section>
     <!-- /Services Section -->
 
-   <!-- Testimonials Section -->
+    <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials section light-background mb-4 p-4">
 
         <!-- Section Title -->
@@ -798,7 +808,7 @@
                             la protection des données sensibles.
                         </p>
                         <div class="profile d-flex align-items-center">
-                            <img src="assets/img/person/person-m-7.webp" class="profile-img" alt="">
+                            <img src="assets/img/profile/profil.png" class="profile-img" alt="">
                             <div class="profile-info">
                                 <h3>Commissaire Principal Didier A.</h3>
                                 <span>Directeur Technique — Police Républicaine</span>
@@ -821,7 +831,7 @@
 
                         </p>
                         <div class="profile d-flex align-items-center">
-                            <img src="assets/img/person/person-f-8.webp" class="profile-img" alt="">
+                            <img src="assets/img/profile/profil.png" class="profile-img" alt="">
                             <div class="profile-info">
                                 <h3>Capitaine Mireille D.</h3>
                                 <span>Experte Sécurité Numérique</span>
@@ -846,7 +856,7 @@
                             résultats.
                         </p>
                         <div class="profile d-flex align-items-center">
-                            <img src="assets/img/person/person-f-10.webp" class="profile-img" alt="">
+                            <img src="assets/img/profile/profil.png" class="profile-img" alt="">
                             <div class="profile-info">
                                 <h3>Élève Commissaire S. Houéssou</h3>
                                 <span>Promotion 2024 — Centre de Formation</span>
@@ -866,5 +876,3 @@
 
 
 <app-footer></app-footer>
-
-
