@@ -1,31 +1,4 @@
-<header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid d-flex align-items-center justify-content-between">
-
-        <!-- Logo à gauche -->
-        <a href="index.html" class="logo d-flex align-items-center">
-            <!-- <img src="assets/img/logo.webp" alt=""> -->
-            <h1 class="sitename mb-0">Alassane ADOM</h1>
-        </a>
-
-        <!-- Menu et liens sociaux regroupés à droite -->
-        <div class="d-flex align-items-center">
-
-            <!-- Menu -->
-            <nav id="navmenu" class="navmenu me-3">
-                <ul class="d-flex mb-0 list-unstyled">
-                    <li><a href="#hero" class="active">Accueil</a></li>
-                    <li><a href="#about">À propos</a></li>
-                    <li><a href="#resume">CV</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#services">DISTINCTIONS </a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-            </nav>
-        </div>
-
-    </div>
-</header>
+    <app-header></app-header>
 
 
 <main class="main">
@@ -99,7 +72,7 @@
     </section><br>
 
 
-    <div class="container  ">
+    <div class="container  " id="about">
 
         <!-- En-tête -->
         <div class="header d-flex justify-content-between">
@@ -117,7 +90,7 @@
         <div class="separator"></div>
 
         <!-- Onglets -->
-        <div class="tabs-container">
+        <div class="tabs-container" >
             <ul class="tabs">
 
                 <li class="tab-item ">
@@ -148,17 +121,12 @@
                     </button>
                 </li>
 
-                <li class="tab-item">
-                    <button class="tab-button text-uppercase" [class.active]="activeTab === 'publications'"
-                        (click)="showTab('publications')">
-                        <i class="fas fa-network-wired"></i> Publications
-                    </button>
-                </li>
+               
             </ul>
         </div>
 
         <!-- Contenu -->
-        <div class="content-section">
+        <div class="content-section" >
 
             <!-- Présentation -->
             <div *ngIf="activeTab === 'presentation'" class="tab-content active">
@@ -395,7 +363,7 @@
                                 </div>
                                 <div class="contribution-details">
                                     <h5>Lauréat du 2ᵉ prix DSI Awards 2022</h5>
-                                    <p class="text-muted">Récompense d'excellence dans le numérique</p>
+                                    <p class="text-muted fs-6">Récompense d'excellence dans le numérique</p>
                                 </div>
                             </div>
 
@@ -407,7 +375,7 @@
                                 </div>
                                 <div class="contribution-details">
                                     <h5>Réseau National d'Administration</h5>
-                                    <p class="text-muted">Contribution au développement de l'infrastructure</p>
+                                    <p class="text-muted fs-6">Contribution au développement de l'infrastructure</p>
                                 </div>
                             </div>
                         </div>
@@ -420,7 +388,7 @@
                                 </div>
                                 <div class="contribution-details">
                                     <h5>Mailing gouvernemental <span class="domain">gouv.bj</span></h5>
-                                    <p class="text-muted">Mise en œuvre de la solution de communication</p>
+                                    <p class="text-muted fs-6">Mise en œuvre de la solution de communication</p>
                                 </div>
                             </div>
 
@@ -430,7 +398,7 @@
                                 </div>
                                 <div class="contribution-details">
                                     <h5>e-Procurement & paiement en ligne</h5>
-                                    <p class="text-muted">Participation à la digitalisation des achats publics</p>
+                                    <p class="text-muted fs-6">Participation à la digitalisation des achats publics</p>
                                 </div>
                             </div>
                         </div>
@@ -442,7 +410,7 @@
                                 </div>
                                 <div class="contribution-details">
                                     <h5>Cabinet juridique numérique <span class="highlight">360 Conseils</span></h5>
-                                    <p class="text-muted">Membre actif du cabinet spécialisé</p>
+                                    <p class="text-muted fs-6">Membre actif du cabinet spécialisé</p>
                                 </div>
                             </div>
                         </div>
@@ -457,7 +425,7 @@
 
 
 
-    <section id="resume" class="resume section light-background ">
+    <section id="experience" class="resume section light-background ">
 
         <!-- Section Title -->
         <br><br><br>
@@ -711,8 +679,93 @@
 
     </section>
 
+    <!-- /Testimonials Section -->
 
-    <!-- Testimonials Section -->
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Services</h2>
+            <div class="title-shape">
+                <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor"
+                        stroke-width="2"></path>
+                </svg>
+            </div>
+            <p>Prestations proposées dans le domaine de la sécurité, de la prévention et de l’assistance aux citoyens.
+            </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h2 class="fw-bold mb-4 servies-title">
+                        Des services professionnels pour votre sécurité
+                    </h2>
+                    <p class="mb-4">
+                        Assistance, prévention, médiation, sensibilisation et accompagnement pour renforcer
+                        la sécurité des personnes, des entreprises et des communautés.
+                    </p>
+                </div>
+
+                <div class="col-lg-8">
+                    <div class="row g-4">
+
+                        <!-- Service 1 -->
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                            <div class="service-item">
+                                <i class="bi bi-shield-check icon"></i>
+                                <h3><a href="service-details.html">Sécurité & Protection</a></h3>
+                                <p>Assistance, présence dissuasive, protection rapprochée et sécurisation
+                                    d’événements ou de zones sensibles.</p>
+                            </div>
+                        </div>
+
+                        <!-- Service 2 -->
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                            <div class="service-item">
+                                <i class="bi bi-people icon"></i>
+                                <h3><a href="service-details.html">Médiation & Gestion de Conflits</a></h3>
+                                <p>Intervention pour résoudre les litiges, apaiser les tensions
+                                    et accompagner les parties vers une solution pacifique.</p>
+                            </div>
+                        </div>
+
+                        <!-- Service 3 -->
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+                            <div class="service-item">
+                                <i class="bi bi-broadcast icon"></i>
+                                <h3><a href="service-details.html">Sensibilisation & Prévention</a></h3>
+                                <p>Organisation de séances éducatives sur la sécurité routière,
+                                    la délinquance, les risques, et les comportements citoyens.</p>
+                            </div>
+                        </div>
+
+                        <!-- Service 4 -->
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+                            <div class="service-item">
+                                <i class="bi bi-file-earmark-text icon"></i>
+                                <h3><a href="service-details.html">Assistance & Orientation Administrative</a></h3>
+                                <p>Aide pour les plaintes, démarches liées aux documents officiels,
+                                    déclarations ou procédures légales.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- /Services Section -->
+
+   <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials section light-background mb-4 p-4">
 
         <!-- Section Title -->
@@ -808,243 +861,10 @@
 
     </section> <br>
 
-
-
-
-    <!-- /Testimonials Section -->
-
-    <!-- Services Section -->
-    <section id="services" class="services section">
-
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-            <h2>Services</h2>
-            <div class="title-shape">
-                <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor"
-                        stroke-width="2"></path>
-                </svg>
-            </div>
-            <p>Prestations proposées dans le domaine de la sécurité, de la prévention et de l’assistance aux citoyens.
-            </p>
-        </div>
-        <!-- End Section Title -->
-
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="row align-items-center">
-
-                <div class="col-lg-4 mb-5 mb-lg-0">
-                    <h2 class="fw-bold mb-4 servies-title">
-                        Des services professionnels pour votre sécurité
-                    </h2>
-                    <p class="mb-4">
-                        Assistance, prévention, médiation, sensibilisation et accompagnement pour renforcer
-                        la sécurité des personnes, des entreprises et des communautés.
-                    </p>
-                </div>
-
-                <div class="col-lg-8">
-                    <div class="row g-4">
-
-                        <!-- Service 1 -->
-                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-                            <div class="service-item">
-                                <i class="bi bi-shield-check icon"></i>
-                                <h3><a href="service-details.html">Sécurité & Protection</a></h3>
-                                <p>Assistance, présence dissuasive, protection rapprochée et sécurisation
-                                    d’événements ou de zones sensibles.</p>
-                            </div>
-                        </div>
-
-                        <!-- Service 2 -->
-                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-                            <div class="service-item">
-                                <i class="bi bi-people icon"></i>
-                                <h3><a href="service-details.html">Médiation & Gestion de Conflits</a></h3>
-                                <p>Intervention pour résoudre les litiges, apaiser les tensions
-                                    et accompagner les parties vers une solution pacifique.</p>
-                            </div>
-                        </div>
-
-                        <!-- Service 3 -->
-                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
-                            <div class="service-item">
-                                <i class="bi bi-broadcast icon"></i>
-                                <h3><a href="service-details.html">Sensibilisation & Prévention</a></h3>
-                                <p>Organisation de séances éducatives sur la sécurité routière,
-                                    la délinquance, les risques, et les comportements citoyens.</p>
-                            </div>
-                        </div>
-
-                        <!-- Service 4 -->
-                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
-                            <div class="service-item">
-                                <i class="bi bi-file-earmark-text icon"></i>
-                                <h3><a href="service-details.html">Assistance & Orientation Administrative</a></h3>
-                                <p>Aide pour les plaintes, démarches liées aux documents officiels,
-                                    déclarations ou procédures légales.</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-    <!-- /Services Section -->
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section light-background py-5">
-        <div class="container" data-aos="fade-up">
-
-            <div class="row g-5">
-
-                <!-- Informations de contact -->
-                <div class="col-lg-6">
-                    <div class="content" data-aos="fade-right" data-aos-delay="200">
-                        <!-- Section Title -->
-                        <div class="container section-title" data-aos="fade-up">
-                            <h2>Contact</h2>
-                            <div class="title-shape">
-                                <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none"
-                                        stroke="currentColor" stroke-width="2"></path>
-                                </svg>
-                            </div>
-                        </div>
-
-
-
-                        <p id="font" class="text-muted fs-6 mb-4">
-                            Pour toute demande professionnelle, administrative ou information complémentaire,
-                            veuillez utiliser les coordonnées ci-dessous ou soumettre une requête via le formulaire.
-                        </p>
-                        <div class="info-contact">
-
-                            <!-- Email -->
-                            <div class="info-item d-flex align-items-start">
-                                <i class="bi bi-envelope-at fs-4 me-3"></i>
-                                <div>
-                                    <h6>Email</h6>
-                                    <p>contactexample.com</p>
-                                </div>
-                            </div>
-
-                            <!-- Téléphone -->
-                            <div class="info-item d-flex align-items-start">
-                                <i class="bi bi-telephone fs-4 me-3"></i>
-                                <div>
-                                    <h6>Téléphone</h6>
-                                    <p>+229 01 95 88 79 25</p>
-                                </div>
-                            </div>
-
-                            <!-- Localisation -->
-                            <div class="info-item d-flex align-items-start">
-                                <i class="bi bi-geo-alt fs-4 me-3"></i>
-                                <div>
-                                    <h6>Localisation</h6>
-                                    <p>Cotonou, Littoral, Bénin</p>
-                                </div>
-                            </div>
-
-                            <!-- Réseaux sociaux -->
-                            <div class="info-item d-flex align-items-start">
-                                <i class="bi bi-share fs-4 me-3"></i>
-                                <div>
-                                    <h6>Réseaux sociaux</h6>
-
-                                    <div class="social-links">
-                                        <a href="#" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                                        <a href="#" title="Twitter"><i class="bi bi-twitter-x"></i></a>
-                                        <a href="#" title="Facebook"><i class="bi bi-facebook"></i></a>
-                                        <a href="#" title="YouTube"><i class="bi bi-youtube"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-
-                    </div>
-                </div>
-
-                <!-- Formulaire de contact -->
-                <div class="col-lg-6">
-                    <div class="contact-form card border-0 shadow-sm" data-aos="fade-left" data-aos-delay="300">
-                        <div class="card-body p-4 p-lg-5">
-
-                            <form action="forms/contact.php" method="post" class="php-email-form">
-
-                                <div class="row gy-4">
-
-                                    <div class="col-12">
-                                        <label class="form-label fw-semibold">Nom et prénoms</label>
-                                        <input type="text" name="name" class="form-control" required>
-                                    </div>
-
-                                    <div class="col-12">
-                                        <label class="form-label fw-semibold">Adresse email </label>
-                                        <input type="email" name="email" class="form-control" required>
-                                    </div>
-
-                                    <div class="col-12">
-                                        <label class="form-label fw-semibold">Objet de la demande</label>
-                                        <input type="text" name="subject" class="form-control" required>
-                                    </div>
-
-                                    <div class="col-12">
-                                        <label class="form-label fw-semibold">Message</label>
-                                        <textarea name="message" rows="6" class="form-control" required></textarea>
-                                    </div>
-
-                                    <div class="col-12 text-center">
-                                        <div class="loading">Traitement en cours...</div>
-                                        <div class="error-message"></div>
-                                        <div class="sent-message">Votre message a été transmis avec succès.</div>
-
-                                        <button type="submit" style="background-color: #053f72; color: white;"
-                                            class="btn w-100 py-2">
-                                            Envoyer votre message
-                                        </button>
-                                    </div>
-
-                                </div>
-
-                            </form>
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <!-- /Contact Section -->
-
 </main>
 
-<footer id="footer" class="footer text-center py-3">
 
-    <div class="container d-flex justify-content-center">
-        <div class="copyright">
-            <p class="m-0">
-                © <span>Copyright</span>
-                <strong class="px-1 sitename">allassanegmail.com</strong>
-                <span>All Rights Reserved</span>
-            </p>
-        </div>
-    </div>
 
-</footer>
+<app-footer></app-footer>
 
-<div class="scroll-to-top" (click)="scrollToTop()">
-    <i class="pi pi-arrow-up"></i>
-</div>
+

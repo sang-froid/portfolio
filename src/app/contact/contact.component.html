@@ -1,0 +1,238 @@
+<!-- Hero Section avec cartes de contact -->
+<app-header></app-header>
+<section class="hero-section pt-5 ">
+    <div class="container">
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-8">
+                <h1 class="display-4 fw-bold mb-3">Contactez-moi</h1>
+                <p class="lead mb-4">N'hésitez pas à me contacter pour toute question, collaboration ou information
+                    complémentaire concernant mes distinctions et publications.</p>
+            </div>
+            <div class="col-lg-4 text-center">
+                <div class="mt-4 mt-lg-0">
+                    <i class="bi bi-chat-left-text-fill" style="font-size: 8rem; opacity: 0.8;"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cartes de contact -->
+        <div class="row g-4 fade-in-up">
+
+            <!-- Carte Téléphone -->
+            <div class="col-lg-4 col-md-6">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="pi pi-phone"></i>
+                    </div>
+                    <h4 class="mb-3">Téléphone</h4>
+                    <h5 class="highlight-text">+229 60 12 34 56</h5>
+                    <p class="small text-muted mt-2">Appel local / International</p>
+                </div>
+            </div>
+
+            <!-- Carte Email -->
+            <div class="col-lg-4 col-md-6">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="pi pi-envelope"></i>
+                    </div>
+                    <h4 class="mb-3">Email</h4>
+                    <h5 class="highlight-text">contactdistinctions.bj</h5>
+                    <p class="small text-muted mt-2">
+                        Pour les collaborations professionnelles
+                    </p>
+                </div>
+            </div>
+
+            <!-- Carte Localisation -->
+            <div class="col-lg-4 col-md-6">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="pi pi-map-marker"></i>
+                    </div>
+                    <h4 class="mb-3">Localisation</h4>
+                    <h5 class="highlight-text">Cotonou, Bénin</h5>
+                    <p class="small text-muted mt-2">
+                        Zone commerciale, Immeuble Étoile du Sud
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- Section Formulaire de contact et carte -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="section-title text-center">Envoyez-moi un message</h2>
+        <p class="text-center text-muted mb-5">Remplissez le formulaire ci-dessous et je vous répondrai dans les plus
+            brefs délais.</p>
+
+        <div class="row g-5">
+            <!-- Formulaire de contact -->
+            <div class="col-lg-8">
+                <div class="contact-form-container fade-in-up">
+                    <form id="contactForm">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="firstName" class="form-label">Nom <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="firstName" placeholder="Votre nom" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="lastName" class="form-label">Prénom <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="lastName" placeholder="Votre prénom"
+                                    required>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                                <input type="email" class="form-control" id="email" placeholder="votre@email.com"
+                                    required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="phone" class="form-label">Téléphone</label>
+                                <input type="tel" class="form-control" id="phone"
+                                    placeholder="Votre numéro de téléphone">
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="message" class="form-label">Message <span class="text-danger">*</span></label>
+                            <textarea class="form-control" id="message" rows="5" placeholder="Votre message ici..."
+                                required></textarea>
+                            <div class="form-text fs-6">Veuillez détailler votre demande autant que possible.</div>
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="bi bi-send me-2"></i> Envoyer le message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Carte de localisation -->
+            <div class="col-lg-4">
+                <div class="map-container fade-in-up">
+                    <div class="text-center p-4">
+                        <i class="bi bi-map-fill" style="font-size: 3rem; color: #ccc; margin-bottom: 1rem;"></i>
+                        <h4 class="mb-3">Localisation</h4>
+                        <p class="mb-2"><strong>Cotonou, Bénin</strong></p>
+                        <p class="small mb-4">Zone commerciale, Immeuble Étoile du Sud</p>
+                        <div class="d-grid">
+                            <a href="https://maps.google.com/?q=Cotonou,Bénin" target="_blank"
+                                class="btn btn-outline-secondary">
+                                <i class="bi bi-geo-alt me-2"></i> Voir sur Google Maps
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section Réseaux sociaux -->
+<section class="social-section">
+    <div class="container">
+        <div class="container">
+            <div class="row align-items-start">
+
+                <!-- Colonne gauche : titre + description -->
+                <div class="col-lg-4 mb-4">
+                    <h2 class="section-title">Mes comptes sur les réseaux</h2>
+                    <p class="text-muted">
+                        Suivez-moi sur les réseaux sociaux pour rester informé de mes dernières activités et
+                        publications.
+                    </p>
+                </div>
+
+                <!-- Colonne droite : réseaux sociaux -->
+                <div class="col-lg-8">
+                    <div class="row g-4">
+
+                        <!-- LinkedIn -->
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="social-card">
+                                <div class="social-icon linkedin-bg">
+                                    <i class="bi bi-linkedin"></i>
+                                </div>
+                                <h5>LinkedIn</h5>
+                                <a href="https://linkedin.com/in/example" target="_blank" class="social-link">
+                                    profil-linkedin
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Twitter -->
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="social-card">
+                                <div class="social-icon twitter-bg">
+                                    <i class="bi bi-twitter"></i>
+                                </div>
+                                <h5>Twitter</h5>
+                                <a href="https://twitter.com/example" target="_blank" class="social-link">
+                                    profil-twitter
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Facebook -->
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="social-card">
+                                <div class="social-icon facebook-bg">
+                                    <i class="bi bi-facebook"></i>
+                                </div>
+                                <h5>Facebook</h5>
+                                <a href="https://facebook.com/example" target="_blank" class="social-link">
+                                    profil-facebook
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Instagram -->
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="social-card">
+                                <div class="social-icon instagram-bg">
+                                    <i class="bi bi-instagram"></i>
+                                </div>
+                                <h5>Instagram</h5>
+                                <a href="https://instagram.com/example" target="_blank" class="social-link">
+                                    profil-instagram
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Lien vers les distinctions à droite -->
+        <div class="row mt-5">
+            <div class="col-lg-8">
+                <div class="alert alert-info" role="alert">
+                    <h5 class="alert-heading"><i class="bi bi-info-circle me-2"></i> Consultez également mes
+                        distinctions</h5>
+                    <p class="mb-0">Découvrez mes distinctions honorifiques et reconnaissances professionnelles.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 text-end">
+                <a href="distinctions.html" class="btn btn-primary btn-lg">
+                    <i class="bi bi-award me-2"></i> Voir mes distinctions
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<app-footer></app-footer>

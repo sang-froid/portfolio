@@ -6,6 +6,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { saveAs } from 'file-saver';
 import Typed from 'typed.js';
+import { FooterComponent } from '../footer/footer.component';
+import { HeaderComponent } from '../header/header.component';
 
 interface Contact {
   nom: string;
@@ -22,6 +24,9 @@ interface Contact {
     FormsModule,
     HttpClientModule,
     CommonModule,
+
+    HeaderComponent,
+    FooterComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
@@ -43,17 +48,12 @@ export class HomeComponent {
 
   selectedFilter: string = '*';
 
- 
+
   constructor(private http: HttpClient) { }
 
 
 
-  scrollToTop() {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  }
+
 
   setFilter(filter: string) {
     this.selectedFilter = filter;
@@ -101,19 +101,19 @@ export class HomeComponent {
     });
   }
 
-isMenuOpen = false;
+  isMenuOpen = false;
 
-toggleMenu() {
-  this.isMenuOpen = !this.isMenuOpen;
-}
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
 
 
 
   activeTab: string = 'presentation';
 
   showTab(tab: string) {
-    console.log("tab",tab);
-    
+    console.log("tab", tab);
+
     this.activeTab = tab;
   }
 
