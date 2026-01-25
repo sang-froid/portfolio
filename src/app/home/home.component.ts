@@ -77,6 +77,19 @@ export class HomeComponent {
       category: ['web', 'official'],
       img: 'assets/img/portfolio/sidoffe.png',
       link: 'https://sidoffe-ng.social.gouv.bj/sidoffepublic/public',
+    },
+      {
+      title: 'Yemi',
+      category: ['web', ],
+      img: 'assets/img/portfolio/yemi.jpeg',
+      link: 'https://yemi.iwajutech.com/',
+    },
+
+      {
+      title: 'Marketo',
+      category: ['web', ],
+      img: 'assets/img/portfolio/marketo.png',
+      link: 'https://adminmarketo.iwajutech.com/#/auth/login',
     }
   ];
   constructor(private http: HttpClient) { }

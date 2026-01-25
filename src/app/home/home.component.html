@@ -1,49 +1,34 @@
-<header id="header" class="header d-flex align-items-center fixed-top" [class.header-show]="isMenuOpen">
-    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+<header id="header" class="header p-4">
+    <div class="header-inner d-flex align-items-center">
 
-        <a href="index.html" class="logo d-flex align-items-center">
-            <!-- Logo -->
+        <!-- Nom à gauche -->
+        <a routerLink="/" class="logo">
+            <h1 class="sitename mb-0">Iréné LOKOSSOU</h1>
         </a>
 
-        <!-- Bouton mobile (ouverture) -->
-        <i class="mobile-nav-toggle bi" [ngClass]="isMenuOpen ? 'bi-x' : 'bi-list'" (click)="toggleMenu()">
-        </i>
-
-        <nav id="navmenu" class="navmenu" [class.navmenu-active]="isMenuOpen">
-
-            <!-- Bouton fermer dans le menu -->
-            <i class="close-nav bi bi-x text-white" (click)="toggleMenu()"></i>
-
-            <div class="profile-img">
-                <img src="assets/img/profile/photo_iréné_lokossou.jpg" class="img-fluid rounded-circle" alt="">
-            </div>
-
-            <a href="index.html" class="logo d-flex align-items-center justify-content-center active">
-                <h1 class="sitename">Iréné LOKOSSOU</h1>
-            </a>
-
-            <div class="social-links text-center">
-                <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-            </div>
-
-            <ul>
-                <li><a href="#hero" (click)="toggleMenu()">Accueil</a></li>
-                <li><a href="#about" (click)="toggleMenu()">À propos</a></li>
-                <li><a href="#resume" (click)="toggleMenu()">CV</a></li>
-                <li><a href="#portfolio" (click)="toggleMenu()">Portfolio</a></li>
-                <li><a href="#services" (click)="toggleMenu()">Services</a></li>
-
-                <li><a href="#contact" (click)="toggleMenu()">Contact</a></li>
+        <!-- Menu à droite -->
+        <nav id="navmenu" class="navmenu" [ngClass]="{ 'active': isMenuOpen }">
+            <ul class="mb-0 ">
+                <li><a class="fs-5" href="#hero" (click)="toggleMenu()">Accueil</a></li>
+                <li><a class="fs-5" href="#about" (click)="toggleMenu()">À propos</a></li>
+                <li><a class="fs-5" href="#portfolio" (click)="toggleMenu()">Portfolio</a></li>
+                <li><a class="fs-5" href="#services" (click)="toggleMenu()">Services</a></li>
+                <li><a class="fs-5" href="#contact" (click)="toggleMenu()">Contact</a></li>
             </ul>
-
         </nav>
+
+        <!-- Bouton mobile -->
+        <button class="mobile-nav-toggle" (click)="toggleMenu()" aria-label="Menu" [attr.aria-expanded]="isMenuOpen">
+            <span class="hamburger" [ngClass]="{'active': isMenuOpen}">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </span>
+        </button>
 
     </div>
 </header>
+
 
 
 <section class="">
@@ -442,7 +427,8 @@
                             <i class="bi bi-display"></i>
                         </div>
                         <h3>Développement d’Interfaces Utilisateur</h3>
-                        <p id="font">Création d’interfaces modernes et responsive, avec HTML5, CSS3, Bootstrap et Tailwind, pour
+                        <p id="font">Création d’interfaces modernes et responsive, avec HTML5, CSS3, Bootstrap et
+                            Tailwind, pour
                             offrir une expérience utilisateur fluide.</p>
                     </div>
                 </div><!-- End Service Item -->
@@ -466,7 +452,8 @@
                             <i class="bi bi-speedometer2"></i>
                         </div>
                         <h3>Optimisation Performance Front-End</h3>
-                        <p id ='font'>Amélioration de la vitesse de chargement, optimisation des assets, lazy loading et bonne
+                        <p id='font'>Amélioration de la vitesse de chargement, optimisation des assets, lazy loading et
+                            bonne
                             structuration du code pour une expérience rapide et fluide.</p>
                     </div>
                 </div><!-- End Service Item -->
@@ -478,7 +465,8 @@
                             <i class="bi bi-palette"></i>
                         </div>
                         <h3>Design UI / UX</h3>
-                        <p id="font">Conception de maquettes, prototypes interactifs et design d’expérience utilisateur pour
+                        <p id="font">Conception de maquettes, prototypes interactifs et design d’expérience utilisateur
+                            pour
                             rendre vos applications intuitives et attractives.</p>
                     </div>
                 </div><!-- End Service Item -->
@@ -490,7 +478,8 @@
                             <i class="bi bi-code-slash"></i>
                         </div>
                         <h3>Intégration Front-End</h3>
-                        <p id ="font">Intégration de designs avec React, Angular ou Vue, liaison avec API backend, gestion des
+                        <p id="font">Intégration de designs avec React, Angular ou Vue, liaison avec API backend,
+                            gestion des
                             états et composants réutilisables.</p>
                     </div>
                 </div><!-- End Service Item -->
@@ -502,7 +491,8 @@
                             <i class="bi bi-brush"></i>
                         </div>
                         <h3>Animations & Interactivité</h3>
-                        <p id="font">Création d’animations CSS, transitions, effets interactifs et micro-interactions pour
+                        <p id="font">Création d’animations CSS, transitions, effets interactifs et micro-interactions
+                            pour
                             enrichir l’expérience utilisateur.</p>
                     </div>
                 </div><!-- End Service Item -->
@@ -685,134 +675,119 @@
     <!-- /Faq Section -->
     <br>
     <!-- Contact Section -->
-    <section id="contact" class="contact section">
 
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-            <h2>Contact</h2>
-            <p id="font">Disponible pour vos projets web et mobile : développement d’applications performantes, UI/UX moderne et
-                intégration full stack.</p>
-        </div>
-
-        <div class="container">
-
-            <div class="row g-4 g-lg-5">
-                <div class="col-lg-5">
-                    <div class="info-box">
-                        <h3>Coordonnées</h3>
-                        <p>Prêt à collaborer sur vos projets web et mobile, du design d'interface à l’intégration et au
-                            développement complet.</p>
-
-                        <div class="info-item">
-                            <div class="icon-box">
-                                <i class="bi bi-geo-alt"></i>
-                            </div>
-                            <div class="content">
-                                <h4>Localisation</h4>
-                                <p>Abomey-Calavi</p>
-                                <p>Bénin</p>
-                            </div>
-                        </div>
-
-                        <div class="info-item">
-                            <div class="icon-box">
-                                <i class="bi bi-telephone"></i>
-                            </div>
-                            <div class="content">
-                                <h4>Téléphone</h4>
-                                <p>+229 01-65-82-67-05</p>
-                            </div>
-                        </div>
-
-                        <div class="info-item">
-                            <div class="icon-box">
-                                <i class="bi bi-envelope"></i>
-                            </div>
-                            <div class="content">
-                                <h4>Email</h4>
-                                <p>irenelokossou0&#64;gmail.com</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-7">
-                    <div class="contact-form">
-                        <h3>Envoyez un message</h3>
-                        <p id="font">Discutons de votre projet web ou mobile. N'hésitez pas à me contacter pour toute
-                            collaboration ou conseil technique.</p>
-
-                        <form class="php-email-form" #contactForm="ngForm" (ngSubmit)="sendMessage(contactForm)">
-                            <div class="row gy-4">
-
-                                <div class="col-md-6">
-                                    <input [(ngModel)]="item.name" type="text" name="nom" class="form-control"
-                                        placeholder="Votre nom" required #nom="ngModel">
-                                    <div *ngIf="nom.invalid && nom.touched" class="error-message">Veuillez entrer votre
-                                        nom.</div>
-                                </div>
-
-                                <div class="col-md-6">
-                                    <input [(ngModel)]="item.email" type="email" class="form-control" name="email"
-                                        placeholder="Votre email" required #email="ngModel">
-                                    <div *ngIf="email.invalid && email.touched" class="error-message">
-                                        Veuillez entrer un email valide.</div>
-                                </div>
-
-                                <div class="col-12">
-                                    <input [(ngModel)]="item.sujet" type="text" class="form-control" name="subject"
-                                        placeholder="Sujet" required #subject="ngModel">
-                                    <div *ngIf="subject.invalid && subject.touched" class="error-message">
-                                        Veuillez entrer le sujet.</div>
-                                </div>
-
-                                <div class="col-12">
-                                    <textarea [(ngModel)]="item.message" class="form-control" name="message" rows="6"
-                                        placeholder="Votre message" required #message="ngModel"></textarea>
-                                    <div *ngIf="message.invalid && message.touched" class="error-message">
-                                        Veuillez entrer votre message.</div>
-                                </div>
-
-                                <div class="col-12 text-center">
-                                    <div *ngIf="isLoading" class="loading">Chargement...</div>
-                                    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
-                                    <div *ngIf="successMessage" class="sent-message">{{ successMessage }}</div>
-
-                                    <button type="submit" class="btn" [disabled]="isLoading || contactForm.invalid">
-                                        <span *ngIf="!isLoading">Envoyer le message</span>
-                                        <span *ngIf="isLoading" class="spinner-border spinner-border-sm" role="status"
-                                            aria-hidden="true"></span>
-                                        <span *ngIf="isLoading"> Envoi...</span>
-                                    </button>
-                                </div>
-
-                            </div>
-                        </form>
-
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
     <!-- /Contact Section -->
 
 </section><br>
 
-<footer id="footer" class="footer position-relative">
+<!-- Contact Section -->
+<section id="contact" class="contact section">
 
-    <div class="container">
-        <div class="copyright text-center ">
-            <p>© <span>Copyright</span> <strong class="px-1 sitename">irenelokossou0&#64;gmail.com</strong> <span>All
-                    Rights
-                    Reserved</span></p>
+    <!-- Section Title -->
+    <!-- <div class="container section-title" data-aos="fade-up">
+            <h2>Contact</h2>
+            <p>Besoin d’un backend robuste, sécurisé et performant ? Contactez-moi pour discuter de votre
+                projet.</p>
+        </div> -->
+
+    <div class="contact-2025">
+        <!-- Grid Background -->
+        <div class="cyber-grid"></div>
+
+        <div class="container">
+            <div class="contact-header">
+                <div class="tag">ARCHITECTE LOGICIELS</div>
+                <h1 class="gradient-title">CONTACT</h1>
+                <p class="subtitle">Direct • Sécurisé • Rapide</p>
+            </div>
+
+            <div class="contact-matrix">
+                <!-- Carte de statut -->
+                <div class="status-card">
+                    <div class="status-indicator">
+                        <div class="pulse-dot"></div>
+                        <span class="fs-5">DISPONIBLE POUR DE NOUVEAUX PROJETS</span>
+                    </div>
+                    <div class="status-info">
+                        <p class="text-uppercasecc"> Disponible pour collaborations en télétravail</p>
+                    </div>
+                </div>
+
+                <!-- Canaux de contact -->
+                <div class="channels-grid">
+                    <!-- EMAIL -->
+                    <a href="mailto:djohichristmiel@gmail.com" class="channel-card" data-type="email">
+                        <div class="channel-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                            </svg>
+                        </div>
+                        <div class="channel-content">
+                            <h3>EMAIL</h3>
+                            <p>irenelokossou0&#64;gmail.com</p>
+                            <span class="response-time">Réponse sous 24h</span>
+                        </div>
+                        <div class="channel-arrow">→</div>
+                    </a>
+
+                    <!-- WHATSAPP -->
+                    <a href="https://wa.me/2290164960603" class="channel-card" data-type="whatsapp">
+                        <div class="channel-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M16.75 13.96c.25.13.41.2.46.3.06.11.04.61-.21 1.18-.2.56-1.24 1.1-1.7 1.12-.46.02-.47.36-2.96-.73-2.49-1.09-3.99-3.75-4.11-3.92-.12-.17-.96-1.38-.92-2.61.05-1.22.69-1.8.95-2.04.24-.26.51-.29.68-.26h.47c.15 0 .36-.06.55.45l.69 1.87c.06.13.1.28.01.44l-.27.41-.39.42c-.12.12-.26.25-.12.5.12.26.62 1.09 1.32 1.78.91.88 1.71 1.17 1.95 1.3.24.14.39.12.54-.04l.81-.94c.19-.25.35-.19.58-.11l1.67.88M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10c-1.97 0-3.8-.57-5.35-1.55L2 22l1.55-4.65A9.969 9.969 0 0 1 2 12 10 10 0 0 1 12 2" />
+                            </svg>
+                        </div>
+                        <div class="channel-content">
+                            <h3>WHATSAPP</h3>
+                            <p>+229 01 65 82 67 05</p>
+                            <span class="response-time">Réponse rapide</span>
+                        </div>
+                        <div class="channel-arrow">→</div>
+                    </a>
+
+                    <!-- FUSEAU HORAIRE -->
+                    <div class="channel-card" data-type="timezone">
+                        <div class="channel-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z" />
+                            </svg>
+                        </div>
+                        <div class="channel-content">
+                            <h3>FUSEAU HORAIRE</h3>
+                            <p>GMT+1 (WAT)</p>
+                            <span class="response-time">Disponible 24h/24</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA (optionnel) -->
+                <!--
+    <div class="contact-cta">
+      <p>Vous avez un projet ou une idée ? Contactez-moi pour construire une solution fiable et évolutive.</p>
+    </div>
+    -->
+            </div>
+            <footer id="footer" class=" footer position-relative ">
+
+                <div class=" d-flex  container justify-content-center">
+                    <div class="copyright text-center ">
+                        <p>© <span>Copyright</span> <strong class="px-1 sitename">irenelokossou0&#64;gmail.com</strong>
+                            <span>All
+                                Rights
+                                Reserved</span></p>
+                    </div>
+
+                </div>
+
+            </footer>
         </div>
 
     </div>
 
-</footer>
+</section><!-- /Contact Section -->
 <div class="scroll-to-top" (click)="scrollToTop()">
     <i class="pi pi-arrow-up"></i>
 </div>
