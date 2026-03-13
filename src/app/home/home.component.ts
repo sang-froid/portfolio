@@ -57,7 +57,7 @@ export class HomeComponent {
     {
       title: 'Mairie de Toffo',
       category: ['web', 'official'],
-      img: '../../assets/img/portfolio/mairie.png',
+      img: 'assets/img/portfolio/mairie.png',
       link: 'https://mairietoffo.bj',
     },
     {
